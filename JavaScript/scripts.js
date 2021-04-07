@@ -130,20 +130,22 @@ $(window).scroll(function () {
 });
 
 window.onload = function() {
-    setTimeout (function(){
+    setInterval(function(){
         changebg()}
     , 15000);
 }
 var i=0;
 function changebg(){
     if (i == 0){
+        console.log("test");
         $("#header").css("background-image", 'url(' + "../img/bg2.jpg" + ')');
         i++;
     }else if(i == 1){
         $("#header").css("background-image", 'url(' + "../img/bg3.jpg" + ')');
         i++;
     }else{
-        $("#header").css("background-image", 'url(' + "../img/background.jpg" + ')');
+        $("#header").css("background-image", 'url(' + "../img/background.png" + ')');
         i=0;
     }
+    changebg();
 }
